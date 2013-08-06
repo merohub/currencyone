@@ -184,10 +184,12 @@ $('#my_select').change(function() {
       result.innerHTML ="[<img src='flags/aus.png' />]AUS($) " +am+ " = [<img src='flags/nepal.png' />]Nepalese(Rs) "  +res4.toFixed(3);  }
 
       if(selectVal=='indtop'){  var res3 = (am*indtop); alert("Indian Rs "+am+ " = British(£) "+res3.toFixed(3));
-     result.innerHTML = "[<img src='flags/india.png' />]Indian(Rs) "+am+ "<br/> = [<img src='flags/britain.png' />]British(£) "+res3.toFixed(3);  }
+     result.innerHTML = "<img src='flags/india.png' />&nbsp;Indian(Rs) "+am+ " = British(£) "+res3.toFixed(3)+"&nbsp;<img src='flags/britain.png' />"
+       +"<br/><br/><font color='#f46100'>Current rate:<br/> 1 Indian Rs = " +indtop+ " British Pound</font>";}
 
       if(selectVal=='ptoind'){  var res4 = (am*ptoind); alert("British Pound($) " +am+ " = Indian(Rs)"+res4.toFixed(3));
-      result.innerHTML ="[<img src='flags/britain.png' />]British(£) " +am+ " <br/> = [<img src='flags/india.png' />]Indian(Rs) "  +res4.toFixed(3);  }
+      result.innerHTML ="<img src='flags/britain.png' />&nbsp;British(£) " +am+ " = Indian(Rs) "  +res4.toFixed(3)+"&nbsp;<img src='flags/india.png' />"
+       +"<br/><br/><font color='#f46100'>Current rate:<br/> 1 British Pound = " +ptoind+ " Indian Rs</font>";  }
 
 
 
