@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rayesh</title>
+<meta nam='description' content=''>
+<meta name='keywords' content=''>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name='HandheldFriendly' content='True'>
+<meta name='MobileOptimized' content='320'>
+<meta name='format-detection' content='telephone=no'>
+<meta name='viewport' content='width=device-width, minimum-scale=1.0, maximum-scale=1.0'>
+<meta http-equiv='cleartype' content='on'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="stylesheet" href="css/custom.css" />
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+
+<!--HOME -->
+<script type="text/javascript">
+  function home_json(){
+   
+    var hr = new XMLHttpRequest();
+   
+    var url = "http://localhost/CurrencyConverter-Ver1.0/home.json";
+    hr.open("GET", url, true);
+    // Set content type header information for sending url encoded variables in the request
+    hr.setRequestHeader("Content-type", "application/json", true);
+    // Access the onreadystatechange event for the XMLHttpRequest object
+    hr.onreadystatechange = function() {
+      if(hr.readyState == 4 && hr.status == 200) {
+        var data = JSON.parse(hr.responseText);
+      var resu = document.getElementById("resu");
+        //results.innerHTML = data.news2.head +" <br/>Full report: " +data.news2.detail;
+      resu.innerHTML = "";
+      for(var obj in data){
+         // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptd+"</strong>" +"</li>"+"</ul>";
+         // $("#ptd").val(data[obj].ptd);
+
+         // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].dtp+"</strong>" +"</li>"+"</ul>";
+         // $("#dtp").val(data[obj].dtp);
+
+         // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].neptop+"</strong>" +"</li>"+"</ul>";
+         // $("#neptop").val(data[obj].neptop);
+
+         // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptonep+"</strong>" +"</li>"+"</ul>";
+         // $("#ptonep").val(data[obj].ptonep);
+
+         //  resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].austop+"</strong>" +"</li>"+"</ul>";
+         // $("#austop").val(data[obj].austop);
+
+          //resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptoaus+"</strong>" +"</li>"+"</ul>";
+         // $("#ptoaus").val(data[obj].ptoaus);
+
+          // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].neptoaus+"</strong>" +"</li>"+"</ul>";
+         // $("#neptoaus").val(data[obj].neptoaus);
+
+         // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].austonep+"</strong>" +"</li>"+"</ul>";
+        //  $("#austonep").val(data[obj].austonep);
+
+            resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].indtop+"</strong>" +"</li>"+"</ul>";
+          $("#indtop").val(data[obj].indtop);
+
+          resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptoind+"</strong>" +"</li>"+"</ul>";
+          $("#ptoind").val(data[obj].ptoind);
+      }
+      }
+    }
+    // Send the data to PHP now... and wait for response to update the status div
+    hr.send(null); // Actually execute the request
+    document.getElementById("resu").innerHTML = "requesting...";
+}
+  </script>
+
+</head>
+<body>
+
+<div data-role="page">
+
+  <div data-role="header" id="head">
+    <br/><br/><h1>Currency <br/>Converter</h1>
+  </div><!-- /header -->
+
+<div id="resu" >
+
+<script type="text/javascript">home_json();</script>
+</div>
+
+
+  <div data-role="content">
+<form name="frm">
+Current rate<input type="hidden" name="rate" id="ptd"/>
+Current rate<input type="hidden" name="rate2" id="dtp"/>
+
+Current rate<input type="hidden" name="rate3" id="neptop"/>
+Current rate<input type="hidden" name="rate4" id="ptonep"/>
+
+Current rate<input type="hidden" name="rate5" id="austop"/>
+Current rate<input type="hidden" name="rate6" id="ptoaus"/>
+
+Current rate<input type="hidden" name="rate7" id="neptoaus"/>
+Current rate<input type="hidden" name="rate8" id="austonep"/>
+
+Current rate<input type="text" name="rate9" id="indtop"/>
+Current rate<input type="text" name="rate10" id="ptoind"/>
+
+Enter the amount<input type="text" name="amt" id="amt" />
+
+  <select id="my_select" name="my_select_box" data-mini="true" data-native-menu="false">
+    <option value=""></option>
+<option value="ptd">British Pound to US Dollar</option>
+<option value="dtp">US Dollar to Pound</option>
+
+<option value="neptpon">Nepalese Rs to Pound</option>
+<option value="pontnep">British Pound to Nepalese Rs</option>
+
+<option value="austpon">Australian Dollar  to British Pound</option>
+<option value="pontaus">British Pound to Australian Dollar</option>
+
+<option value="neptoaus">Nepalese Rs to Australian Dollar</option>
+<option value="austonep"> Australian Dollar to Nepalese Rs</option>
+
+<option value="indtop">Indian Rs to British Pound</option>
+<option value="ptoind">British Pound to Indian Rs</option>
+
+</select>
+</select></p>
+</form>
+<!--RESULT-->
+<div id="result">
+
+
+</div><!--result ends-->
+  </div><!-- /content -->
+
+</div>
+
+<script type="text/javascript">
+$('#my_select').change(function() {
+   // assign the value to a variable, so you can test to see if it is working
+    var selectVal = $('#my_select :selected').val();
+      var am = $('#amt').val();  
+      var ptd = $('#ptd').val();
+      var dtp = $('#dtp').val();
+      var neptop = $('#neptop').val();
+      var ptonep = $('#ptonep').val();
+      var austop = $('#austop').val();
+      var ptoaus = $('#ptoaus').val();
+      var neptoaus = $('#neptoaus').val();
+      var austonep = $('#austonep').val();
+
+       var indtop = $('#indtop').val();
+      var ptoind = $('#ptoind').val();
+      //var errMsgContainerO = document.getElementById('errMsgContainer');
+    //alert(selectVal);
+
+    if(selectVal=='ptd'){  var res = (am*ptd);  alert("£ "+am+ " = $ "+res.toFixed(3)); 
+    result.innerHTML ="[<img src='flags/britain.png' />]British(£) " +am+ " = [<img src='flags/us.png' />]US($) "+res.toFixed(3);  }
+
+    if(selectVal=='dtp'){  var res2 = (am*dtp); alert("$ "+am+ " = British(£) "+res2.toFixed(3));  
+    result.innerHTML ="[<img src='flags/us.png' />]US($) " +am+ " = [<img src='flags/britain.png' />]British(£) "+res2.toFixed(3);  }
+
+     if(selectVal=='neptpon'){  var res3 = (am*neptop); alert("Rs "+am+ " = £ "+res3.toFixed(4));
+     result.innerHTML = "[<img src='flags/nepal.png' />]Nepalese(Rs) "+am+ " = [<img src='flags/britain.png' />]British(£) "+res3.toFixed(3);  }
+
+      if(selectVal=='pontnep'){  var res4 = (am*ptonep); alert("£ " +am+ " = Rs"+res4.toFixed(3));
+      result.innerHTML ="[<img src='flags/britain.png' />]British(£) " +am+ " = [<img src='flags/nepal.png' />]Nepalese(Rs) "  +res4.toFixed(3);  }
+
+      if(selectVal=='austpon'){  var res3 = (am*austop); alert("AUS(4) "+am+ " = £ "+res3.toFixed(3));
+     result.innerHTML = "[<img src='flags/aus.png' />]AUS($) "+am+ " = [<img src='flags/britain.png' />]British(£0 "+res3.toFixed(3);  }
+
+      if(selectVal=='pontaus'){  var res4 = (am*ptoaus); alert("£ " +am+ " = AUS($)"+res4.toFixed(3));
+      result.innerHTML ="British(£) " +am+ " = AUS($) "  +res4.toFixed(3);  }
+
+      if(selectVal=='neptoaus'){  var res3 = (am*neptoaus); alert("Nepalese Rs "+am+ " = AUS($) "+res3.toFixed(3));
+     result.innerHTML = "[<img src='flags/nepal.png' />]Nepalese(Rs) "+am+ " = [<img src='flags/aus.png' />]AUS($) "+res3.toFixed(3);  }
+
+      if(selectVal=='austonep'){  var res4 = (am*austonep); alert("£AUS($) " +am+ " = Nepalese(Rs)"+res4.toFixed(3));
+      result.innerHTML ="[<img src='flags/aus.png' />]AUS($) " +am+ " = [<img src='flags/nepal.png' />]Nepalese(Rs) "  +res4.toFixed(3);  }
+
+      if(selectVal=='indtop'){  var res3 = (am*indtop); alert("Indian Rs "+am+ " = British(£) "+res3.toFixed(3));
+     result.innerHTML = "[<img src='flags/india.png' />]Indian(Rs) "+am+ "<br/> = [<img src='flags/britain.png' />]British(£) "+res3.toFixed(3);  }
+
+      if(selectVal=='ptoind'){  var res4 = (am*ptoind); alert("British Pound($) " +am+ " = Indian(Rs)"+res4.toFixed(3));
+      result.innerHTML ="[<img src='flags/britain.png' />]British(£) " +am+ " <br/> = [<img src='flags/india.png' />]Indian(Rs) "  +res4.toFixed(3);  }
+
+
+
+});
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+.ui-mobile .ui-header{background: url(../images/header.gif); height: 120px;}
+
+
+
+#result{color: #0000ff;  text-align: center; font-weight: bold; 
+
+color:#08233e;
+font:Futura, ‘Century Gothic’, AppleGothic, sans-serif; font-size: 90%;
+
+
+/*background-color:rgba(255,204,0,1);*/
+
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+
+-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+cursor:pointer;
+display:block;
+width:100%;
+}
