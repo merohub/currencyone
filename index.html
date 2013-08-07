@@ -38,34 +38,34 @@
         //results.innerHTML = data.news2.head +" <br/>Full report: " +data.news2.detail;
       resu.innerHTML = "";
       for(var obj in data){
-         resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptd+"</strong>" +"</li>"+"</ul>";
+        // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptd+"</strong>" +"</li>"+"</ul>";
          $("#ptd").val(data[obj].ptd);
 
-         resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].dtp+"</strong>" +"</li>"+"</ul>";
+         //resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].dtp+"</strong>" +"</li>"+"</ul>";
          $("#dtp").val(data[obj].dtp);
 
-         resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].neptop+"</strong>" +"</li>"+"</ul>";
+        // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].neptop+"</strong>" +"</li>"+"</ul>";
          $("#neptop").val(data[obj].neptop);
 
-         resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptonep+"</strong>" +"</li>"+"</ul>";
+        // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptonep+"</strong>" +"</li>"+"</ul>";
          $("#ptonep").val(data[obj].ptonep);
 
-          resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].austop+"</strong>" +"</li>"+"</ul>";
+         // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].austop+"</strong>" +"</li>"+"</ul>";
          $("#austop").val(data[obj].austop);
 
-          resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptoaus+"</strong>" +"</li>"+"</ul>";
+         // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptoaus+"</strong>" +"</li>"+"</ul>";
          $("#ptoaus").val(data[obj].ptoaus);
 
-          resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].neptoaus+"</strong>" +"</li>"+"</ul>";
+         // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].neptoaus+"</strong>" +"</li>"+"</ul>";
          $("#neptoaus").val(data[obj].neptoaus);
 
-         resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].austonep+"</strong>" +"</li>"+"</ul>";
+        // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].austonep+"</strong>" +"</li>"+"</ul>";
           $("#austonep").val(data[obj].austonep);
 
-            resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].indtop+"</strong>" +"</li>"+"</ul>";
+           // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].indtop+"</strong>" +"</li>"+"</ul>";
           $("#indtop").val(data[obj].indtop);
 
-          resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptoind+"</strong>" +"</li>"+"</ul>";
+         // resu.innerHTML += "<strong>"+"<ul style='list-style-type:none'><li>"+data[obj].ptoind+"</strong>" +"</li>"+"</ul>";
           $("#ptoind").val(data[obj].ptoind);
       }
       }
@@ -105,8 +105,8 @@ Current rate<input type="hidden" name="rate6" id="ptoaus"/>
 Current rate<input type="hidden" name="rate7" id="neptoaus"/>
 Current rate<input type="hidden" name="rate8" id="austonep"/>
 
-Current rate<input type="text" name="rate9" id="indtop"/>
-Current rate<input type="text" name="rate10" id="ptoind"/>
+Current rate<input type="hidden" name="rate9" id="indtop"/>
+Current rate<input type="hidden" name="rate10" id="ptoind"/>
 
 Enter the amount<input type="text" name="amt" id="amt" />
 
