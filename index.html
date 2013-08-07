@@ -93,20 +93,20 @@
 
   <div data-role="content">
 <form name="frm">
-Current rate<input type="hidden" name="rate" id="ptd"/>
-Current rate<input type="hidden" name="rate2" id="dtp"/>
+<input type="hidden" name="rate" id="ptd"/>
+<input type="hidden" name="rate2" id="dtp"/>
 
-Current rate<input type="hidden" name="rate3" id="neptop"/>
-Current rate<input type="hidden" name="rate4" id="ptonep"/>
+<input type="hidden" name="rate3" id="neptop"/>
+<input type="hidden" name="rate4" id="ptonep"/>
 
-Current rate<input type="hidden" name="rate5" id="austop"/>
-Current rate<input type="hidden" name="rate6" id="ptoaus"/>
+<input type="hidden" name="rate5" id="austop"/>
+<input type="hidden" name="rate6" id="ptoaus"/>
 
-Current rate<input type="hidden" name="rate7" id="neptoaus"/>
-Current rate<input type="hidden" name="rate8" id="austonep"/>
+<input type="hidden" name="rate7" id="neptoaus"/>
+<input type="hidden" name="rate8" id="austonep"/>
 
-Current rate<input type="hidden" name="rate9" id="indtop"/>
-Current rate<input type="hidden" name="rate10" id="ptoind"/>
+<input type="hidden" name="rate9" id="indtop"/>
+input type="hidden" name="rate10" id="ptoind"/>
 
 Enter the amount<input type="text" name="amt" id="amt" />
 
@@ -159,28 +159,28 @@ $('#my_select').change(function() {
     //alert(selectVal);
 
     if(selectVal=='ptd'){  var res = (am*ptd);  alert("£ "+am+ " = $ "+res.toFixed(3)); 
-    result.innerHTML ="[<img src='flags/britain.png' />]British(£) " +am+ " = [<img src='flags/us.png' />]US($) "+res.toFixed(3);  }
+    result.innerHTML ="<img src='flags/britain.png' />&nbsp;British(£) " +am+ " = US($) "+res.toFixed(3)+"&nbsp;<img src='flags/us.png' />";  }
 
     if(selectVal=='dtp'){  var res2 = (am*dtp); alert("$ "+am+ " = British(£) "+res2.toFixed(3));  
-    result.innerHTML ="[<img src='flags/us.png' />]US($) " +am+ " = [<img src='flags/britain.png' />]British(£) "+res2.toFixed(3);  }
+    result.innerHTML ="<img src='flags/us.png' />&nbsp;US($) " +am+ " = British(£) "+res2.toFixed(3)+"&nbsp;<img src='flags/britain.png' />";  }
 
      if(selectVal=='neptpon'){  var res3 = (am*neptop); alert("Rs "+am+ " = £ "+res3.toFixed(4));
-     result.innerHTML = "[<img src='flags/nepal.png' />]Nepalese(Rs) "+am+ " = [<img src='flags/britain.png' />]British(£) "+res3.toFixed(3);  }
+     result.innerHTML = "<img src='flags/nepal.png' />&nbsp;Nepalese(Rs) "+am+ " = British(£) "+res3.toFixed(3)+"&nbsp;<img src='flags/britain.png' />";  }
 
       if(selectVal=='pontnep'){  var res4 = (am*ptonep); alert("£ " +am+ " = Rs"+res4.toFixed(3));
-      result.innerHTML ="[<img src='flags/britain.png' />]British(£) " +am+ " = [<img src='flags/nepal.png' />]Nepalese(Rs) "  +res4.toFixed(3);  }
+      result.innerHTML ="<img src='flags/britain.png' />&nbsp;British(£) " +am+ " = [<img src='flags/nepal.png' />]Nepalese(Rs) "  +res4.toFixed(3);  }
 
       if(selectVal=='austpon'){  var res3 = (am*austop); alert("AUS(4) "+am+ " = £ "+res3.toFixed(3));
-     result.innerHTML = "[<img src='flags/aus.png' />]AUS($) "+am+ " = [<img src='flags/britain.png' />]British(£0 "+res3.toFixed(3);  }
+     result.innerHTML = "<img src='flags/aus.png' />&nbsp;AUS($) "+am+ " = [<img src='flags/britain.png' />]British(£0 "+res3.toFixed(3);  }
 
       if(selectVal=='pontaus'){  var res4 = (am*ptoaus); alert("£ " +am+ " = AUS($)"+res4.toFixed(3));
-      result.innerHTML ="British(£) " +am+ " = AUS($) "  +res4.toFixed(3);  }
+      result.innerHTML ="<img src='flags/britain.png' />&nbsp;British(£) " +am+ " = AUS($) "  +res4.toFixed(3)+"&nbsp;<img src='flags/aus.png' />";  }
 
       if(selectVal=='neptoaus'){  var res3 = (am*neptoaus); alert("Nepalese Rs "+am+ " = AUS($) "+res3.toFixed(3));
-     result.innerHTML = "[<img src='flags/nepal.png' />]Nepalese(Rs) "+am+ " = [<img src='flags/aus.png' />]AUS($) "+res3.toFixed(3);  }
+     result.innerHTML = "<img src='flags/nepal.png' />&nbsp;Nepalese(Rs) "+am+ " = <img src='flags/aus.png' />AUS($) "+res3.toFixed(3);  }
 
       if(selectVal=='austonep'){  var res4 = (am*austonep); alert("£AUS($) " +am+ " = Nepalese(Rs)"+res4.toFixed(3));
-      result.innerHTML ="[<img src='flags/aus.png' />]AUS($) " +am+ " = [<img src='flags/nepal.png' />]Nepalese(Rs) "  +res4.toFixed(3);  }
+      result.innerHTML ="<img src='flags/aus.png' />&nbsp;AUS($) " +am+ " = [<img src='flags/nepal.png' />]Nepalese(Rs) "  +res4.toFixed(3);  }
 
       if(selectVal=='indtop'){  var res3 = (am*indtop); alert("Indian Rs "+am+ " = British(£) "+res3.toFixed(3));
      result.innerHTML = "<img src='flags/india.png' />&nbsp;Indian(Rs) "+am+ " = British(£) "+res3.toFixed(3)+"&nbsp;<img src='flags/britain.png' />"
